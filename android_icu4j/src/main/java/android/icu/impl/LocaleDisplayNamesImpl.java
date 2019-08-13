@@ -150,11 +150,11 @@ public class LocaleDisplayNamesImpl extends LocaleDisplayNames {
             pattern = "{0} ({1})";
         }
         this.format = new MessageFormat(pattern);
-        if (pattern.contains("（")) {
-            formatOpenParen = '（';
-            formatCloseParen = '）';
-            formatReplaceOpenParen = '［';
-            formatReplaceCloseParen = '］';
+        if (pattern.contains("\uFF08")) {
+            formatOpenParen = '\uFF08';
+            formatCloseParen = '\uFF09';
+            formatReplaceOpenParen = '\uFF3B';
+            formatReplaceCloseParen = '\uFF3D';
         } else  {
             formatOpenParen = '(';
             formatCloseParen = ')';
